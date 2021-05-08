@@ -1,0 +1,24 @@
+<h1 id="tableLabel">Orders: </h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!orders"><em>No data!</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="orders">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>MadeBy</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.id }}</td>
+      <td>{{ order.name }}</td>
+      <td>{{ order.madeby }}</td>
+      <td>{{ order.type }}</td>
+    </tr>
+  </tbody>
+</table>
